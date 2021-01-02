@@ -8,14 +8,12 @@ call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'dark'
 
 Plug 'junegunn/fzf', { 'dir': '$XDG_DATA_HOME/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-map <Space><Space> :Files<CR>
-
-Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -75,6 +73,13 @@ set relativenumber
 " Allow mouse usage
 set mouse=a
 
+" Allows buffers to be hidden if they've been modified
+set hidden
+
+" Open new split panes to right and bottom
+set splitbelow
+set splitright
+
 """""""""""""""""""""""""""""""""""""""
 " == Theming ==
 """""""""""""""""""""""""""""""""""""""
@@ -95,5 +100,42 @@ set ffs=unix,dos,mac
 
 " Use tabs instead of spaces
 set noexpandtab
+set softtabstop=0
+set tabstop=4
+set shiftwidth=4
+
+"""""""""""""""""""""""""""""""""""""""
+" == Keybinds ==
+"""""""""""""""""""""""""""""""""""""""
+
+let mapleader=" "
+
+" Open fuzzy finder
+map <leader><Space> :Files<CR>
+
+" Open a new empty buffer
+nmap <leader>T :enew<cr>
+
+" Next buffer
+nmap <leader>l :bnext<CR>
+
+" Previous buffer
+nmap <leader>h :bprevious<CR>
+
+" Close the current buffer
+nmap <leader>bd :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
+" Split vertically and horizontally
+nmap <leader>sv :vsp<CR>
+nmap <leader>sh :sp<CR>
+
+" Navigate splits with ctrl-[hjkl]
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 endif

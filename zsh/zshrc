@@ -21,3 +21,5 @@ if [ "$TERM" != "linux" ]; then
 fi
 
 neofetch
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
