@@ -75,16 +75,6 @@ if [ ! -d "$BASE_DIR" ] ; then
 fi
 create_link $CWD/picom/picom.conf $BASE_DIR/picom.conf
 
-###################
-# powerline-shell #
-###################
-
-BASE_DIR="$BASE/powerline-shell"
-if [ ! -d "$BASE_DIR" ] ; then
-	mkdir $BASE_DIR
-fi
-create_link $CWD/powerline-shell/config.json $BASE_DIR/config.json
-
 ##########
 # xmonad #
 ##########
