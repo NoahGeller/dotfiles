@@ -84,3 +84,13 @@ if [ ! -d "$BASE_DIR" ] ; then
 	mkdir $BASE_DIR
 fi
 create_link $CWD/powerline-shell/config.json $BASE_DIR/config.json
+
+##########
+# xmonad #
+##########
+
+BASE_DIR="$HOME/.xmonad"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/xmonad/xmonad.hs $BASE_DIR/xmonad.hs

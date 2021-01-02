@@ -9,3 +9,4 @@ export PAGER=/bin/less
 
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.local/cross/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
