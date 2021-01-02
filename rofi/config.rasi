@@ -1,3 +1,4 @@
 configuration {
 	theme:	"solarized";
+	font:	"monospace 16";
 }
