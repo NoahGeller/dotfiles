@@ -64,3 +64,13 @@ if [ ! -d "$BASE_DIR" ] ; then
 	mkdir $BASE_DIR
 fi
 create_link $CWD/fontconfig/fonts.conf $BASE_DIR/fonts.conf
+
+#########
+# picom #
+#########
+
+BASE_DIR="$BASE/picom"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/picom/picom.conf $BASE_DIR/picom.conf
