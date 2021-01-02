@@ -12,7 +12,7 @@ create_link () {
 }
 
 CWD="$(pwd)"
-BASE="$XDG_CONFIG_HOME"
+BASE="$HOME/.config"
 
 #######
 # zsh #
@@ -44,3 +44,23 @@ if [ ! -d "$BASE_DIR" ] ; then
 	mkdir $BASE_DIR
 fi
 create_link $CWD/nvim/init.vim $BASE_DIR/init.vim
+
+########
+# rofi #
+########
+
+BASE_DIR="$BASE/rofi"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/rofi/config.rasi $BASE_DIR/config.rasi
+
+##############
+# fontconfig #
+##############
+
+BASE_DIR="$BASE/fontconfig"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/fontconfig/fonts.conf $BASE_DIR/fonts.conf
