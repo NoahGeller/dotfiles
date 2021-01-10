@@ -11,9 +11,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'dark'
+let g:airline_powerline_fonts = 1
 
 Plug 'junegunn/fzf', { 'dir': '$XDG_DATA_HOME/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 call plug#end()
 
@@ -68,7 +71,6 @@ set novisualbell
 
 " Turn on relative line numbers
 set number
-set relativenumber
 
 " Allow mouse usage
 set mouse=a

@@ -84,3 +84,13 @@ if [ ! -d "$BASE_DIR" ] ; then
 	mkdir $BASE_DIR
 fi
 create_link $CWD/xmonad/xmonad.hs $BASE_DIR/xmonad.hs
+
+##########
+# xmobar #
+##########
+
+BASE_DIR="$BASE/xmobar"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/xmobar/xmobarrc $BASE_DIR/xmobarrc
