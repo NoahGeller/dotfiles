@@ -25,16 +25,6 @@ fi
 create_link $CWD/zsh/zshenv $BASE_DIR/.zshenv
 create_link $CWD/zsh/zshrc $BASE_DIR/.zshrc
 
-#############
-# alacritty #
-#############
-
-BASE_DIR="$BASE/alacritty"
-if [ ! -d "$BASE_DIR" ] ; then
-	mkdir $BASE_DIR
-fi
-create_link $CWD/alacritty/alacritty.yml $BASE_DIR/alacritty.yml
-
 ##########
 # neovim #
 ##########
@@ -75,22 +65,12 @@ if [ ! -d "$BASE_DIR" ] ; then
 fi
 create_link $CWD/picom/picom.conf $BASE_DIR/picom.conf
 
-##########
-# xmonad #
-##########
+############
+# starship #
+############
 
-BASE_DIR="$HOME/.xmonad"
+BASE_DIR="$BASE"
 if [ ! -d "$BASE_DIR" ] ; then
 	mkdir $BASE_DIR
 fi
-create_link $CWD/xmonad/xmonad.hs $BASE_DIR/xmonad.hs
-
-##########
-# xmobar #
-##########
-
-BASE_DIR="$BASE/xmobar"
-if [ ! -d "$BASE_DIR" ] ; then
-	mkdir $BASE_DIR
-fi
-create_link $CWD/xmobar/xmobarrc $BASE_DIR/xmobarrc
+create_link $CWD/starship/starship.toml $BASE_DIR/starship.toml

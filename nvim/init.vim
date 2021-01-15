@@ -18,6 +18,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
+Plug 'cespare/vim-toml'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""
@@ -33,6 +35,9 @@ filetype indent on
 
 " Hide buffers when abandoned
 set hidden
+
+" Automatically execute commands for certain filetypes
+autocmd BufWritePost .Xresources silent !xrdb <afile>
 
 """""""""""""""""""""""""""""""""""""""
 " == User interface ==
