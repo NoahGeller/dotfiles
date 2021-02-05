@@ -74,3 +74,20 @@ if [ ! -d "$BASE_DIR" ] ; then
 	mkdir $BASE_DIR
 fi
 create_link $CWD/starship/starship.toml $BASE_DIR/starship.toml
+
+#########
+# dunst #
+#########
+
+BASE_DIR="$BASE/dunst"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/dunst/dunstrc $BASE_DIR/dunstrc
+
+#######
+# gdb #
+#######
+
+BASE_DIR="$HOME"
+create_link $CWD/gdb/gdbinit $BASE_DIR/.gdbinit

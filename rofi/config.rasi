@@ -1,4 +1,5 @@
 configuration {
-	theme:	"solarized";
-	font:	"monospace 16";
+	color-window: 	"argb:95fdf6e3";
+	color-normal:	"argb:00000000,#000000,argb:00000000,argb:95000000";
+	font:			"monospace 16";
 }

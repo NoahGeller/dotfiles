@@ -7,6 +7,14 @@ autoload -U compinit promptinit
 compinit
 promptinit; prompt gentoo
 
+export PATH=~/.local/src/fuchsia/.jiri_root/bin:$PATH
+source ~/.local/src/fuchsia/scripts/fx-env.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias ls='exa'
+alias cat='bat'
+alias sudo='doas'
+alias grep='rg'
 
 eval "$(starship init zsh)"

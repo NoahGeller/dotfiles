@@ -12,4 +12,5 @@ export CARGO_HOME=$XDG_DATA_HOME/cargo
 
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.local/cross/:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 source "/home/noah/.local/share/cargo/env"
