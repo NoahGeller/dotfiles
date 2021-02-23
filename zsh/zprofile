@@ -1,0 +1,2 @@
+# Local configuration.
+[[ -f ~/.zprofile.local ]] && source ~/.zprofile.local

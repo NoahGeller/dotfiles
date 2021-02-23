@@ -22,7 +22,9 @@ BASE_DIR="$BASE/zsh"
 if [ ! -d "$BASE_DIR" ] ; then
 	mkdir $BASE_DIR
 fi
+create_link $CWD/zsh/zlogin $BASE_DIR/.zlogin
 create_link $CWD/zsh/zshenv $BASE_DIR/.zshenv
+create_link $CWD/zsh/zprofile $BASE_DIR/.zprofile
 create_link $CWD/zsh/zshrc $BASE_DIR/.zshrc
 
 ##########
