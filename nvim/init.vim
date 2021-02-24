@@ -25,6 +25,9 @@ Plug 'cespare/vim-toml'
 
 Plug 'rust-lang/rust.vim'
 
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""
