@@ -1,8 +1,13 @@
+* {
+	font-family: monospace;
+	border-radius: 0;
+	outline-style: none;
+}
 
 window {
-margin: 0px;
-border: 1px solid #bd93f9;
-background-color: #282a36;
+	margin: 0px;
+	border: 1px solid #bd93f9;
+	background-color: #282a36;
 }
 
 #input {
