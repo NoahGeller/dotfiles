@@ -6,14 +6,14 @@ if !exists('g:vscode')
 
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'dracula'
 let g:airline_powerline_fonts = 1
 
 Plug 'junegunn/fzf', { 'dir': '$XDG_DATA_HOME/fzf', 'do': './install --all' }
@@ -100,8 +100,8 @@ set splitright
 syntax enable
 
 " Set color scheme
-colorscheme gruvbox
-set background=dark
+colorscheme dracula
+set termguicolors
 
 " Set encoding and standard file type
 set encoding=utf8

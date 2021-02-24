@@ -1,0 +1,73 @@
+@define-color background	#282a36;
+@define-color foreground	#f8f8f2;
+@define-color selection		#44475a;
+@define-color black			#21222c;
+@define-color red			#ff6e6e;
+@define-color orange		#ffb86c;
+@define-color yellow		#f1fa8c;
+@define-color green			#50fa7b;
+@define-color purple		#bd83f9;
+@define-color cyan			#8be9fd;
+@define-color pink			#ff79c6;
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: monospace;
+	font-size: 16px;
+	min-height: 0;
+}
+
+window#waybar {
+	background: @background;
+	color: @foreground;
+	border-bottom: 3px solid @black;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	background: transparent;
+	color: @foreground;
+}
+
+#workspaces button.focused {
+	background: @selection;
+	border-bottom: 3px solid @foreground;
+}
+
+#pulseaudio, #clock, #network, #cpu, #memory, #temperature {
+	padding: 0 10px;
+	border-bottom: 3px solid @black;
+}
+
+#pulseaudio {
+	background-color: @red;
+	color: @background;
+}
+
+#network {
+	background-color: @orange;
+	color: @background;
+}
+
+#cpu {
+	background-color: @yellow;
+	color: @background;
+}
+
+#memory  {
+	background-color: @green;
+	color: @background;
+}
+
+#temperature {
+	background-color: @purple;
+	color: @background;
+}
+
+#clock {
+	background-color: @cyan;
+	color: @background;
+}

@@ -1,5 +1,5 @@
 configuration {
-	color-window: 	"argb:95fdf6e3";
-	color-normal:	"argb:00000000,#000000,argb:00000000,argb:95000000";
+	color-window: 	"argb:fffdf6e3";
+	color-normal:	"argb:00000000,#000000,argb:00000000,argb:ff000000";
 	font:			"monospace 16";
 }

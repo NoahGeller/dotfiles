@@ -93,3 +93,44 @@ create_link $CWD/dunst/dunstrc $BASE_DIR/dunstrc
 
 BASE_DIR="$HOME"
 create_link $CWD/gdb/gdbinit $BASE_DIR/.gdbinit
+
+#############
+# alacritty #
+#############
+
+BASE_DIR="$BASE/alacritty"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/alacritty/alacritty.yml $BASE_DIR/alacritty.yml
+
+########
+# sway #
+########
+
+BASE_DIR="$BASE/sway"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/sway/config $BASE_DIR/config
+
+########
+# wofi #
+########
+
+BASE_DIR="$BASE/wofi"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/wofi/style.css $BASE_DIR/style.css
+
+##########
+# waybar #
+##########
+
+BASE_DIR="$BASE/waybar"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/waybar/config $BASE_DIR/config
+create_link $CWD/waybar/style.css $BASE_DIR/style.css

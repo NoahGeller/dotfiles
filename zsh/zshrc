@@ -1,6 +1,7 @@
 # Local configuration.
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+export DOTFILES=$HOME/.dotfiles
 # Load everything else.
 for DOTFILE in $DOTFILES/zsh/rc/*(.)
 do
