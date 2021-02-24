@@ -25,8 +25,8 @@ output HDMI-A-1 bg ~/docs/wallpapers/gentoo.png fill
 default_border pixel 5
 
 client.focused #282a36 #44475a #ffffff
-client.focused_inactive #44475a #282a36 #ffffff
-client.unfocused #44475a #282a36 #ffffff
+client.focused_inactive #44475a #21222c #ffffff
+client.unfocused #44475a #21222c #ffffff
 
 font monospace, emoji 12
 
