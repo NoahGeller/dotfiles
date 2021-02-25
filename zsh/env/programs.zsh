@@ -1,3 +1,4 @@
-export VISUAL=/usr/bin/nvim
-export PAGER=/usr/bin/less
-export MANPAGER=/usr/bin/less
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+export MANPAGER="nvim +Man!"
