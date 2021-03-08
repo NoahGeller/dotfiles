@@ -1,0 +1,60 @@
+############
+# Identity #
+############
+set realname = "Noah Geller"
+set from = "noah.stanford.geller@gmail.com"
+
+# If you have another address:
+alternates "ngeller@stanford.edu"
+
+set certificate_file="$XDG_DATA_HOME/neomutt/certificates"
+
+###################
+# Gmail over IMAP #
+###################
+set ssl_starttls
+
+set imap_user = "noah.stanford.geller@gmail.com"
+set imap_pass = "`gpg --batch -q --decrypt $XDG_DATA_HOME/neomutt/gmail.gpg`"
+
+set smtp_url = "smtp://noah.stanford.geller@gmail.com@smtp.gmail.com:587/"
+set smtp_pass = "`gpg --batch -q --decrypt $XDG_DATA_HOME/neomutt/gmail.gpg`"
+set smtp_authenticators = "plain"
+
+set folder = "imaps://noah.stanford.geller@gmail.com@imap.gmail.com:993/"
+set spoolfile = "+INBOX"
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Trash"
+
+mailboxes $spoolfile $record $postponed $trash
+
+set mail_check = 60
+
+##################
+# Index settings #
+##################
+set quit = ask-yes
+set sort = threads
+
+set header_cache= "$XDG_DATA_HOME/neomutt/hcache"
+
+#########
+# GnuPG #
+#########
+set crypt_use_gpgme = yes
+set pgp_autosign = yes
+set pgp_sign_as = noah.stanford.geller@gmail.com
+set pgp_replyencrypt = yes
+
+##########
+# Colors #
+##########
+source dracula.muttrc
+
+#############
+# Interface #
+#############
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats

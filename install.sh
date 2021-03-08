@@ -134,3 +134,34 @@ if [ ! -d "$BASE_DIR" ] ; then
 fi
 create_link $CWD/waybar/config $BASE_DIR/config
 create_link $CWD/waybar/style.css $BASE_DIR/style.css
+
+#########
+# kitty #
+#########
+
+BASE_DIR="$BASE/kitty"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/kitty/kitty.conf $BASE_DIR/kitty.conf
+
+###########
+# neomutt #
+###########
+
+BASE_DIR="$BASE/neomutt"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/neomutt/neomuttrc $BASE_DIR/neomuttrc
+create_link $CWD/neomutt/mailcap $HOME/.mailcap
+
+########
+# tmux #
+########
+
+BASE_DIR="$HOME"
+if [ ! -d "$BASE_DIR" ] ; then
+	mkdir $BASE_DIR
+fi
+create_link $CWD/tmux/tmux.conf $BASE_DIR/.tmux.conf

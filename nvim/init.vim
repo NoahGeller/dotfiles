@@ -16,8 +16,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'dracula'
 let g:airline_powerline_fonts = 1
 
-Plug 'junegunn/fzf', { 'dir': '$XDG_DATA_HOME/fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'mcchrish/nnn.vim'
+let g:nnn#set_default_mappings = 0
+let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
@@ -126,8 +127,8 @@ set shiftwidth=4
 
 let mapleader=" "
 
-" Open fuzzy finder
-map <leader><Space> :Files<CR>
+" Open file browser
+map <leader><Space> :NnnPicker<CR>
 
 " Open a new empty buffer
 nmap <leader>T :enew<cr>

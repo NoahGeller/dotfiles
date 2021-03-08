@@ -1,3 +1,4 @@
 if [ "$(tty)" = "/dev/tty1" ]; then
+	source ~/.dotfiles/zsh/zshenv
 	exec dbus-run-session sway > ~/.cache/sway.log 2>&1
 fi
